@@ -11,10 +11,17 @@
  ;; If there is more than one, they won't work right.
  '(TeX-source-correlate-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(sanityinc-tomorrow-day))
+ '(custom-enabled-themes '(moe-light))
  '(custom-safe-themes
-   '("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default))
- '(package-selected-packages '(color-theme-sanityinc-tomorrow auctex company undo-tree))
+   '("7a8206a977c612016094e6390de94f6af98c3a4adc5b3561f56376730b98af9e" default))
+ '(ispell-dictionary nil)
+ '(ispell-program-name "hunspell")
+ '(org-babel-load-languages '((python . t)))
+ '(org-babel-python-command "python3")
+ '(org-babel-python-mode 'python)
+ '(org-confirm-babel-evaluate nil)
+ '(package-selected-packages '(moe-theme auctex undo-tree company))
+ '(python-shell-interpreter "python3")
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -34,3 +41,8 @@
 
 ;;reftex
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
+
+;;org
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
